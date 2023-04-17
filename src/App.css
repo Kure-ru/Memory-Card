@@ -1,0 +1,97 @@
+@font-face {
+  font-family: "Stardew Valley";   /*Can be any text*/
+  src: local("Stardew_Valley"),
+    url("./assets/fonts/Stardew_Valley.ttf") format("truetype");
+}
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background: url("./assets/background.jpeg");
+  width: 100dvw;
+  height: 100vh;
+  font-size: 18px;
+  font-family: "Stardew Valley";
+}
+
+/* TYPOGRAPHY */
+
+p {
+  color: #201700;
+  font-size: 2.5rem;
+}
+
+/* BASE STYLE */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.title {
+  padding: 1rem;
+}
+
+.score__board {
+  background: #e0a100;
+  box-shadow: 1px 1px 4px #4d3700;
+  padding: 1rem 4rem 1rem 2rem;
+  margin-right: 3rem;
+}
+
+main {
+  padding: 4rem;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  justify-items: center;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.3);
+  width: 200px;
+  height: 300px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.card p {
+  font-size: 3rem;
+  padding-top: 1rem;
+}
+.card img{
+ width: 200px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-around;
+}
+
+.icon {
+  background: #e0a100;
+  width: 50px;
+  height: 50px;
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+
+.icon:hover {
+  background: #b78300;
+  cursor: pointer;
+}
+
+.message{
+  width: 80%;
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
