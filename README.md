@@ -2,7 +2,7 @@
 
 This code implements a memory game based on one of my favorite games, Stardew Valley. The game displays a set of cards, each with a character's name and picture. If the player clicks on a card that they have already clicked on, the game is over. If the player clicks on all the cards without making any mistakes, they win the game.
 
-**Link to project:** http://recruiters-love-seeing-live-demos.com/
+[**Link to project:**](https://memory-card-chi.vercel.app/)
 
 ![screenshot](screenshot.png)
 
@@ -24,11 +24,3 @@ The code uses a technique called *randomization* to shuffle the characters each 
 -  I learned about *Fisher-Yates shuffle algorithm* to mix the cards
 - *Modular code* The project uses modular code to break down the application into smaller and more manageable parts.
 
-## Examples:
-Take a look at these couple examples that I have in my own portfolio:
-
-**Palettable:** https://github.com/alecortega/palettable
-
-**Twitter Battle:** https://github.com/alecortega/twitter-battle
-
-**Patch Panel:** https://github.com/alecortega/patch-panel

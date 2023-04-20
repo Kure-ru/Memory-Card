@@ -10,7 +10,7 @@
 }
 
 #root {
-  background: url("./assets/background.jpeg");
+  background: url("/assets/background.jpeg");
   width: 100dvw;
   height: 100vh;
   font-size: 18px;

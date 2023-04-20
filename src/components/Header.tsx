@@ -2,7 +2,7 @@ const Header = () => {
 
   return (
     <header>
-    <img className='title' src='public/assets/Main_Logo.webp' alt='stardew valley' />
+    <img className='title' src='/assets/Main_Logo.webp' alt='stardew valley' />
     </header>
   )
 }
