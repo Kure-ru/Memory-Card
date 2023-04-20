@@ -3,15 +3,16 @@ import { useState } from 'react'
 
 type Props ={
   charNum:number,
+  soundOn: boolean,
   setSoundOn: any,
 }
 
-const TaskBar = ({ charNum, setSoundOn }: Props) => {
+const TaskBar = ({ charNum, soundOn, setSoundOn }: Props) => {
   const [help, setHelp] = useState<boolean>(false)
-
+  console.log(soundOn)
   const handleClick = () => {
-    setSoundOn(false)
-    console.log('sound off')
+   soundOn ? setSoundOn(false) : setSoundOn(true)
+
   }
 
 const handleHelp = () => {

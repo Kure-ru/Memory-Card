@@ -21,12 +21,12 @@ const Cards = () => {
     }, [])
 
     const handleSelectCard = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-        play()
+        if (soundOn){play()}
         checkIfCorrect(e.currentTarget.getAttribute("data-value") as string)
     }
 
     const handleStartGame = () => {
-        play()
+        if (soundOn){play()}
         resetGame()
         setDisplayedChars(pickRandomValues());
     }
@@ -83,6 +83,8 @@ const Cards = () => {
             updateBestScore()
         }
     }
+
+    console.log(soundOn)
     return (
         <>
         <ScoreBoard score={12 - characterList.length} bestScore={bestScore}/>
@@ -98,21 +100,19 @@ const Cards = () => {
 
             </main>
             {!gameStarted &&
-                <div>
-                    <button onClick={handleStartGame}>Start playing</button>
+                <div className="gamestart__container">
+                    <button className="gamestart__button" onClick={handleStartGame}>Start playing</button>
                 </div>}
             {gameOver &&
                 <div>
-                    <img className="message" src="/assets/lose.png" />
-                    <button onClick={handleStartGame}>Play again</button>
+                    <img onClick={handleStartGame} className="message" src="/assets/lose.png" />
                 </div>}
             {gameWon &&
                 <div>
-                    <img className="message" src="/assets/win.png" />
-                    <button onClick={handleStartGame}>Play again</button>
+                    <img onClick={handleStartGame} className="message" src="/assets/win.png" />
                 </div>}
            
-                <TaskBar charNum={12 - characterList.length} setSoundOn={setSoundOn} />
+                <TaskBar charNum={12 - characterList.length} soundOn={soundOn} setSoundOn={setSoundOn} />
 
         </>
     )
